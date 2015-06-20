@@ -1,1 +1,42 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="oled_cleardisplay" id="42" x="-1" y="95">
+    <next>
+      <block type="oled_setcursor" id="26" inline="true">
+        <value name="STARTX">
+          <block type="math_number" id="91">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <value name="STARTY">
+          <block type="math_number" id="90">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <next>
+          <block type="oled_drawtext" id="66">
+            <field name="TEXT">4+5=</field>
+            <next>
+              <block type="oled_drawnumber" id="75" inline="true">
+                <value name="NUMBER">
+                  <block type="math_arithmetic" id="89" inline="true">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="math_number" id="82">
+                        <field name="NUM">4</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="101">
+                        <field name="NUM">5</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
